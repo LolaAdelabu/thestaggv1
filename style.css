@@ -377,7 +377,7 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 5em;
+    padding-bottom: 2rem;
 }
 
 .footer-bar ul {
