@@ -693,8 +693,10 @@ textarea {
         padding: .5rem;
     }
     .footer-bar {
-        padding: 3rem;
-        height: 30%;
+        padding-top: 2rem;
+        min-height: 30%;
+        height: auto;
+    }
     }
     .footer-bar ul {
         display: none;
