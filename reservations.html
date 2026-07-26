@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reservations | The Stagg</title>
+        <meta name="description" content="Book a table at The Stagg for breakfast, lunch, coffee, or a catch-up with friends. Reserve your spot in just a few clicks.">
+        <meta content="Reservations – The Stagg, An Organic Cafe" property="og:title">
+        <meta property="og:type" content="website">
+        <meta content="images/header.jpg" property="og:image"> 
+        <meta property="og:url" content="www.thestag.com">
+        <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link rel="icon" type="images/svg" href="images/favicon.svg">
+      </head>
+   
+    <body>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./our_story.html">Our Story</a></li>
+                <li><a href="./contact_us.html">Contact Us</a></li>
+                <li><a href="./reservations.html">Reservations</a></li>
+            </ul>
+        </nav> 
+
+        <main role="main">
+            <div class="form-container">
+                <figure>
+                    <img src="images/reservations.jpg" alt="Two people sitting at a corner of a cafe eating food" class="form-img r-img">
+                </figure>
+
+                <div class="form-bg">
+                    <div class="cafe-form">
+                        <p class="form-italic" ><em>Want to get the best spot in the cafe? Or plan a get together? Make your reservation here.</em></p>
+                        <p class="form-required"><span class="required">*</span> &nbsp; <em>— Required</em></p>
+
+                        <form>
+                            <label for="reservation-full-name">Full Name <span class="required">*</span>:
+                                <input name="reservation-full-name" type="text" id="reservation-full-name" autocomplete="name" required>
+                            </label>
+                            <label for="reservation-email">Email <span class="required">*</span>:
+                                <input name="reservation-email" type="email" id="reservation-email" autocomplete="email" required>
+                            </label>
+                            <label for="reservation-phone-number">Phone Number <span class="required">*</span>:
+                                <input name="reservation-phone-number" type="tel" id="reservation-phone-number" min="1" max="10" required>
+                            </label>
+                            <label for="party-size">Party Size:
+                                <input name="party-size" type="number" id="party-size" required>
+                            </label>
+                            <label for="reservation-date">Reservation date and time <span class="required">*</span>:</label>
+                                <input name="reservation-date-time" id="reservation-date" class="date-time" type="date" required>
+                            <label for="reservation-time">
+                                <input name="reservation-date-time" id="reservation-time" class="date-time" type="time" min="1" max="10" required>
+                            </label>
+                            <label for="additional-details">Additional Details:</label>
+                                <textarea id="additional-details-message" name="additional-details-message" rows="4" cols="50" ></textarea>
+                            <button class="form-button">Make Reservation</button>
+                        </form>    
+                    </div>
+                </div>
+            </div>  
+        </main>
+
+        <footer class="footer-bar">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./our_story.html">Our Story</a></li>
+                    <li><a href="./contact_us.html">Contact Us</a></li>
+                    <li><a href="./reservations.html">Reservations</a></li>
+                </ul>
+            </nav> 
+    
+            <address>
+                <p>Contact Us</p>
+                <p><a href="tel:#">012-345-6789</a> | <a href="mailto:#">email@emaillink.com</a></p>
+            </address>
+        </footer>
+    </body>
+</html>
