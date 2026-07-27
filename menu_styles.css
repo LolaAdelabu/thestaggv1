@@ -4,53 +4,69 @@
     box-sizing: border-box;
 }
 
-#menu-icon { 
-    margin: 0 auto;
-    padding-top: 10%;
-    padding-bottom: 3%;
-    display: block;
-    width: 15%;
+h1 {
+    color: #5f7b46;
+    text-align: center;
+    font-family: Libre Bodoni, Serif;
+    font-size: clamp(4rem, 10.5vw, 15.5rem);
 }
 
-#menu-title {
-    text-align: center;
-    font-size: 3.5em;
-    margin-bottom: -5rem;
-    text-transform: uppercase;
-    color: #4F7942;
-    font-family: Libre Bodoni, Serif;
+img {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-header-items {
+    margin: 5rem auto 0.12rem;
+    max-width: 70%; 
+    min-height: 55%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu-header-items img {
+    max-width: 34%;
+    margin: 1rem auto 2rem;
+    height: auto;
+    object-fit: contain;
 }
 
 h2 {
-    padding-bottom: -10px;
     font-size: clamp(1.25rem, 4vw, 3.5rem);
 }
 
-.menu-container {
+.menu-container-items {
     border: 9px double #5f7b46;
     margin: 0 auto 10rem;
-    width: 90%;
-    width: min(90%, 1200px);
-    padding: clamp(1rem, 4vw, 6rem);
+    max-width: 90%;
+    padding: clamp(1rem, 6vw, 6rem);
 }
 
 section {
-    margin: 2.5rem auto;
+    margin: 1.5rem auto;
 }
 
 #menu-nav {
     background: #fbf2e9;
-    margin: auto;
-    width: 85%;
-    min-height: 1.5rem;
+    margin: 1rem auto;
+    max-width: 85%;
+    max-height: 3.5rem;
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     position: sticky;
     top: 0;
-    left: 10px;
-    right: 10px;
 }
 
 #menu-nav ul{
@@ -84,10 +100,11 @@ h3 {
 .vg {
     color:#4F7942;
     font-style: italic;
+
 }
 
 article {
-    padding: 1.25% 0;
+    padding: 1rem 0;
     margin-bottom: 2rem;
 }
 
@@ -103,16 +120,12 @@ article {
     font-size: clamp(1.05rem, 2vw, 1.5rem);
     margin-top: 0;
     padding: 0 auto;
-    margin-right: 8px;
+    margin-right: 20px;
 }
 
 hr {
     border: 1.5px solid #a58974;
     width: 75%;
-}
-
-.menu {
-    margin-top: 0.5%;
 }
 
 .menu-description {
@@ -123,7 +136,7 @@ hr {
 }
 
 .specification {
-    margin: 3rem 0 0 3rem;
+    margin: 3px 0 0 65px;
     font-size: 1.25rem;
     color: #4F7942;
 }
@@ -135,16 +148,22 @@ hr {
         align-items: center;        
         position: static;
         top: 0;
-        left: 0;
         width: 100%;
         z-index: 1000;
         border-radius: 0 0 25px 25px;
     }
+    .menu-header-items img {
+        margin: .17rem auto;
+    }
+
     .nav-bar li {
         margin: auto;
-        padding: .5rem;
     }
-    
+    #menu-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .footer-bar ul {
         display: flex;
     }    
@@ -154,8 +173,11 @@ hr {
     }
 
     .footer-bar a {
-        font-size: clamp(.95rem, 1.2vw, 4rem);
+        font-size: clamp(.8rem, 1.2vw, 4rem);
     }
+}
+
+
 }
 
 
