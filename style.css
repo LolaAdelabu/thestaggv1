@@ -49,14 +49,9 @@ a:focus-visible {
 }
 
 header {
-    position: relative;
-    top: 0;
     z-index: 1;
 }
 
-header img {
-    max-height: 90vh;
-}
 
 main img {
     border-radius: 5.5%;
@@ -115,25 +110,50 @@ main img {
 
 h1{
     color: #fbf2e9;
+    text-align: center;
     font-family: Libre Bodoni, Serif;
     font-size: clamp(4rem, 10.5vw, 15.5rem);
-    margin-top: 0;
 }  
 
-.header-items {
-    position: absolute;
-    top: 25%;
+
+.header-img {
+    background-image: url("images/header.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 16 / 9;
+    width: 100%;
 }
 
-.header-title {
-    left: 24.5%;
+.header2-img {
+    background-image: url("images/header_2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-items {
+    margin: auto;
+    max-width: 70%;
+    min-height: 55%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .header-icon {
-    top: 45.5%;
-    left: 43.5%;
-    bottom: 1.5%;
-    width: clamp(6rem, 15vw, 30rem);
+    max-width: 25%;
+    margin: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 #our-story-link {
@@ -157,7 +177,7 @@ p {
 }
 
 .container {
-    max-width: 75%;
+    max-width: 85%;
     width: 100%;
     margin: 6rem auto 10rem;
     position: relative;
@@ -188,7 +208,7 @@ q {
 
 .osl-bg {
     background: #fefcf5;
-    padding: 3rem;
+    padding: 2rem;
     width: min(70%, 35rem);
     border-radius: 45px;
     border-bottom-left-radius: 5px;
@@ -206,7 +226,7 @@ q {
 
 .quote-decor {
     background: #fefcf5;
-    padding: 4rem;
+    padding: 2.5rem;
     margin: auto;
     border-radius: 100px;
     border-bottom-right-radius: 2.5px;
@@ -226,7 +246,7 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: .5rem;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: .5rem auto;
     flex-wrap: wrap;
 }
@@ -276,7 +296,7 @@ h2 {
     display: block;
     margin-top: .5rem;
     padding: 1rem;
-    font-size: 1.15rem;
+    font-size: clamp(.96rem, 1.5vw, 1.5rem);
     font-family: Quicksilver, sans-serif;
     color: #fbf2e9;
     max-width: 45%;
@@ -327,6 +347,10 @@ h2 {
     font-weight: 100;
 }
 
+.bold-address {
+    font-weight: bold;
+}
+
 .text-address {
     border: 1px solid #A58974;
 }
@@ -345,7 +369,7 @@ h2 {
 }
 
 .hoo h2 {
-    font-size: clamp(3rem, 4vw, 6rem);
+    font-size: clamp(2.5rem, 4vw, 6rem);
     color: #fbf2e9;
     text-align: center;
 }
@@ -590,7 +614,7 @@ form {
 .form-button {
     display: block;
     padding: 1rem;
-    font-size: 1.15rem;
+    font-size: clamp(.96rem, 1.5vw, 1.5rem);
     font-family: Quicksilver, sans-serif;
     color: #fbf2e9;
     min-width: 30%;
@@ -684,7 +708,7 @@ textarea {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        min-width: 100%;
         z-index: 1000;
         border-radius: 0 0 25px 25px;
     }
@@ -692,11 +716,19 @@ textarea {
         margin: auto;
         padding: .5rem;
     }
+    #food-display {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    #food-display img {
+        min-width: 70%;
+    }
     .footer-bar {
         padding-top: 2rem;
         min-height: 30%;
         height: auto;
-    }
     }
     .footer-bar ul {
         display: none;
@@ -707,21 +739,31 @@ textarea {
     .r-img {
         height: 50vh;
     }
-    .form-container{
+    .form-container {
         flex-direction: column;
+        align-items: center;
     }
     .form-img {
         border-radius: 0 0 25px 25px;
+    }
+    figure {
+        width: 95%;
     }
     #our-mission-grp {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 1rem;
-        margin: auto;
+    }
+    #our-mission img {
+        height: 30rem;
+        margin: .5rem auto;
     }
     #our-mission {
         padding: 2rem;
+    }
+    #our-mission-text {
+        margin-top: 2.5rem;
     }
     .cu {
         height: 50vh;
@@ -729,8 +771,10 @@ textarea {
         object-fit: cover;
     }
     .form-bg {
-        min-width: 94%;
+        width: 85%;
+        margin: 2rem auto;
     }
+
 }
 
 @media (max-width: 768px) { 
