@@ -35,14 +35,14 @@ header {
 }
 
 .menu-header-items img {
-    max-width: 34%;
-    margin: 1rem auto 2rem;
+    max-width: 25%;
+    margin: 5% auto 2rem;
     height: auto;
     object-fit: contain;
 }
 
 h2 {
-    font-size: clamp(1.25rem, 4vw, 3.5rem);
+    font-size: clamp(1.45rem, 4vw, 3.5rem);
 }
 
 .menu-container-items {
@@ -78,9 +78,10 @@ section {
 
 #menu-nav li{
     text-align: center;
-    margin: clamp(0.25rem, 1vw, 1.5rem);
-    padding: clamp(0.25rem, 1vw, 1rem);
+    margin: clamp(0.2rem, 1vw, 1.5rem);
+    padding: clamp(0.2rem, 1vw, 1rem);
     font-family: Quicksilver, sans-serif;
+    text-wrap: nowrap;
 }
 
 #menu-nav a{
@@ -90,6 +91,17 @@ section {
     font-size: clamp(.98rem, 2vw, 1.5rem);
 }
 
+#menu-nav a:link {
+    color:#4F7942;
+}
+
+#menu-nav a:hover {
+    color:#82aa5c;
+}
+
+#menu-nav a:active {
+    color:#3d6437;
+}
 
 h3 {
     color: #4F7942;
@@ -136,9 +148,9 @@ hr {
 }
 
 .specification {
-    margin: 3px 0 0 65px;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: #4F7942;
+    margin-left: 4.5rem;
 }
 
 @media (max-width: 640px) {
@@ -152,16 +164,19 @@ hr {
         z-index: 1000;
         border-radius: 0 0 25px 25px;
     }
-    .menu-header-items img {
-        margin: .17rem auto;
-    }
-
     .nav-bar li {
         margin: auto;
+    }
+    .menu-header-items {
+        margin: 2rem auto .25rem;
     }
     #menu-nav ul {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .menu-header-items img {
+        margin-bottom: 1.5rem;
     }
 
     .footer-bar ul {
@@ -175,9 +190,17 @@ hr {
     .footer-bar a {
         font-size: clamp(.8rem, 1.2vw, 4rem);
     }
+    .specification {
+        margin-left: 1rem;
+    }
 }
 
-
+@media (max-width: 768px) {
+    .menu-header-items img {
+        max-width: 30%;
+    }
+    .specification {
+        margin-left: 2rem;
+    }
 }
-
 
