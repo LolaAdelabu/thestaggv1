@@ -11,7 +11,7 @@
         <meta property="og:url" content="www.thestag.com">
         <link rel="stylesheet" href="./style.css">
         <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-        <link rel="icon" type="images/svg" href="images/favicon.svg">
+        <link rel="icon" type="images/svg" href="./images/faviicon.svg">
       </head>
    
     <body>
@@ -37,23 +37,34 @@
                         <p class="form-required"><span class="required">*</span> &nbsp; <em>— Required</em></p>
 
                         <form>
-                            <label for="reservation-full-name">Full Name<span class="required">*</span> :
-                                <input name="reservation-full-name" type="text" id="reservation-full-name" autocomplete="name" required>
-                            </label>
-                            <label for="reservation-email">Email<span class="required">*</span> :
-                                <input name="reservation-email" type="email" id="reservation-email" autocomplete="email" required>
-                            </label>
+                            <fieldset>
+                                <legend>Full Name<span class="required">*</span>:</legend>
+                                
+                                    <label for="reservation">First Name :</label>
+                                    <input name="reservation-first-name" type="text" id="reservation-first-name" autocomplete="given-name" class="full-name" pattern="[A-Za-z]+" required>
+
+                                    <label for="reservation">Last Name :</label>
+                                    <input name="reservation" type="text" id="reservation-name" autocomplete="family-name" class="full-name" pattern="[A-Za-z]+" required>
+                            </fieldset>
+                            
                             <label for="reservation-phone-number">Phone Number<span class="required">*</span> :
-                                <input name="reservation-phone-number" type="tel" id="reservation-phone-number" min="1" max="10" required>
+                                <input name="reservation-phone-number" type="tel" id="reservation-phone-number" class="phone" pattern="[A-Za-z]{10}" required>
                             </label>
-                            <label for="party-size">Party Size :
-                                <input name="party-size" type="number" id="party-size" required>
+                          
+                            <fieldset>
+                                <legend>Reservation date and time<span class="required">*</span> :</legend>
+                                
+                                    <label for="reservation-date">Reservation Date<span class="required">*</span> :</label>
+                                    <input name="reservation-date" id="reservation-date" class="date-time" type="date" required>
+                                
+                                    <label for="reservation-time">Reservation Time<span class="required">*</span> :</label>
+                                    <input name="reservation-time" id="reservation-time" class="date-time" type="time" min="1" max="10" required>
+                            </fieldset>
+
+                            <label for="party-size">Party Size <span class="ps-itlaic">(Max size of 10)</span><span class="required">*</span> :
+                                <input name="party-size" type="number" id="party-size" min="1" max="10" required>
                             </label>
-                            <label for="reservation-date">Reservation date and time<span class="required">*</span> :</label>
-                                <input name="reservation-date-time" id="reservation-date" class="date-time" type="date" required>
-                            <label for="reservation-time">
-                                <input name="reservation-date-time" id="reservation-time" class="date-time" type="time" min="1" max="10" required>
-                            </label>
+
                             <label for="additional-details">Additional Details :</label>
                                 <textarea id="additional-details-message" name="additional-details-message" rows="4" cols="50" ></textarea>
                             <button class="form-button">Make Reservation</button>
