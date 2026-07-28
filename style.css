@@ -726,9 +726,9 @@ textarea {
         min-width: 70%;
     }
     .footer-bar {
-        padding-top: 2rem;
-        min-height: 30%;
+        padding: 2rem 1rem;
         height: auto;
+        min-height: unset;
     }
     .footer-bar ul {
         display: none;
