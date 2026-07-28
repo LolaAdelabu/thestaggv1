@@ -6,8 +6,11 @@
 
 body {
     background: #fbf2e9;
+}
+
+main {
     margin: auto 0;
-    position: relative;
+    position: relative;   
 }
 
 img {
@@ -552,11 +555,6 @@ p {
     margin: auto;
 }
 
-.reservation {
-    display: inline-block;
-    width: 12.5%;
-}
-
 input {
     display: block;
     min-width: 70%;
@@ -567,13 +565,14 @@ input {
     background: #fbf2e9;
     font-family: Quicksilver, sans-serif;
     font-size: clamp(.9rem, 1.25vw, 1.5rem);
+    margin-bottom: 1rem;
     color: #3a3531;
 }
 
 label {
     display: block;
     color: #3a3531;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     font-family: Quicksilver, sans-serif;
 }
 
@@ -611,6 +610,42 @@ form {
     margin-top: 1.5em;
 }
 
+.name-fields {
+    display: flex;
+    gap: 1;
+}
+
+.field input{
+    width: 90%;
+    padding: 4%;
+}
+
+fieldset {
+    border: 0; 
+    color: #3a3531;
+    font-size: 1.15rem;
+    font-family: Quicksilver, sans-serif;
+}
+
+fieldset label {
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+legend {
+    font-size: 1.45rem;
+    margin-bottom: .5rem;
+    font-weight: 100;
+    color: #3a3531;
+    font-family: Quicksilver, sans-serif;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .form-button {
     display: block;
     padding: 1rem;
@@ -641,16 +676,16 @@ form {
     padding-bottom: 4rem;
 }
 
-option {
-    background: #1b00e9;
-    padding-top: 2rem;
-}
-
 .form-required {
     font-size: 1rem;
     font-style: italic;
     font-family: Quicksilver, sans-serif;
     color: #5f7b46;
+    border-radius: 6px;
+}
+
+.ps-itlaic{
+    font-style: italic;
 }
 
 .required {
@@ -688,6 +723,10 @@ button:focus-visible {
     min-width: 25%;
 }
 
+.phone {
+    min-width: 35%;  
+}
+
 textarea {
     border: 0px;
     width: max(70%, 35vw);
@@ -712,6 +751,9 @@ textarea {
         z-index: 1000;
         border-radius: 0 0 25px 25px;
     }
+    .header-img {
+        aspect-ratio: 16 / 12;
+    }
     .nav-bar li {
         margin: auto;
         padding: .5rem;
@@ -723,12 +765,11 @@ textarea {
         gap: 2rem;
     }
     #food-display img {
-        min-width: 70%;
+        min-width: 100%;
     }
     .footer-bar {
-        padding: 2rem 1rem;
+        padding-top: 2rem;
         height: auto;
-        min-height: unset;
     }
     .footer-bar ul {
         display: none;
@@ -756,7 +797,8 @@ textarea {
         gap: 1rem;
     }
     #our-mission img {
-        height: 30rem;
+        height: 25rem;
+        width: 30rem;
         margin: .5rem auto;
     }
     #our-mission {
@@ -774,15 +816,23 @@ textarea {
         width: 85%;
         margin: 2rem auto;
     }
-
 }
 
 @media (max-width: 768px) { 
+    .header-img {
+        aspect-ratio: 16 / 12;
+    }
     .footer-bar {
         padding-bottom: 2rem;
     }
     .main-content-bttn {
         display: none;
+    }
+    #founder-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     #our-mission {
         padding: 2rem;
@@ -810,5 +860,13 @@ textarea {
     textarea {
         width: 100%;
         padding: .8rem;
+    }
+
+    .name-fields {
+        display: block;
+    }
+    .field input{
+        padding: 3%;
+        width: 70%;
     }
 }
