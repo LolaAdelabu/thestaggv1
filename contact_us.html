@@ -11,7 +11,7 @@
         <meta property="og:url" content="www.thestag.com">
         <link rel="stylesheet" href="./style.css">
         <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-        <link rel="icon" type="images/svg" href="images/favicon.svg">
+        <link rel="icon" type="images/svg" href="./images/faviicon.svg">
     </head>
    
     <body>
@@ -36,14 +36,24 @@
                         <p class="form-italic"><em>We at The Stagg appreciate customer feedback. We want to hold ourselves up to high standards and accountability to continue giving you the best dining experience.</em></p>
                         <p class="form-required"><span class="required">*</span> &nbsp; <em>— Required</em></p>
                         <form>
-                            <label for="contact-us-full-name">Full Name<span class="required">*</span> :
-                                <input name="contact-us-full-name" type="text" id="contact-us-full-name" autocomplete="name" required>
-                            </label>
+                            <fieldset class="name-fields">
+                                <legend>Full Name<span class="required">*</span>:</legend>
+                                
+                                <div class="field">
+                                    <label for="contact-us-first-name">First Name :</label>
+                                    <input name="contact-us-first-name" type="text" id="contact-us-first-name" autocomplete="given-name" class="full-name" pattern="[A-Za-z]+" required>
+                                </div>
+
+                                <div class="field">
+                                    <label for="contact-us-last-name">Last Name :</label>
+                                    <input name="contact-us-last-name" type="text" id="contact-us-last-name" autocomplete="family-name" class="full-name" pattern="[A-Za-z]+" required>
+                                </div>
+                            </fieldset>
                             <label for="contact-us-email">Email<span class="required">*</span> :
                                 <input name="contact-us-email" type="email" id="contact-us-email" autocomplete="email" required>
                             </label>
                             <label for="contact-us-phone-number">Phone Number<span class="required">*</span> :
-                                <input name="contact-us-phone-number" type="tel" id="contact-us-phone-number" size="10" required>
+                                <input name="contact-us-phone-number" type="tel" id="contact-us-phone-number" class="phone" pattern="[0-9]{10}" required>
                             </label>
                             <label for="inqury">Reason for Inqury<span class="required">*</span> :</label>
                                 <select name="inqury" id="inqury" size="1" required>
