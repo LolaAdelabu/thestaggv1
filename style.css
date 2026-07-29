@@ -5,15 +5,20 @@
 }
 
 html {
-    background: red;
+    height: 100%;
 }
 
 body {
-    background: yellow;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background: #fbf2e9;
 }
 
 main {
-    background: lightblue;
+    flex: 1;
+    position: relative;
 }
 
 footer {
