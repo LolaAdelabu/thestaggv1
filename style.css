@@ -414,6 +414,8 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
     padding-bottom: calc(2rem + env(safe-area-inset-bottom));
 }
 
