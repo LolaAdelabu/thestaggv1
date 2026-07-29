@@ -407,15 +407,14 @@ h2 {
 }
 
 .footer-bar {
-    /*background-color: #5f7b46;*/
+    background-color: #5f7b46;
     border-top-left-radius: 5em;
     border-top-right-radius: 5em;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 2rem;
-    background: green;
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
 }
 
 .footer-bar ul {
