@@ -9,14 +9,16 @@ html {
 }
 
 body {
-    /*background: #fbf2e9*/
     background: yellow;
 }
 
 main {
-    position: relative;   
+    background: lightblue;
 }
 
+footer {
+    background: green;
+}
 img {
     object-fit: cover;
     display: block;
