@@ -776,6 +776,7 @@ textarea {
     }
     .footer-bar {
         padding-top: 2rem;
+        padding-bottom: calc(2rem + env(safe-area-inset-bottom));
         height: auto;
     }
     .footer-bar ul {
