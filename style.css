@@ -5,21 +5,19 @@
 }
 
 html {
-    height: 100%
+    min-height: 100%
 }
 
 body {
     background: #fbf2e9;
     min-height: 100%
 }
+
 main {
-    flex: 1;
+    margin: 0;
     position: relative;
 }
 
-footer {
-    background: green;
-}
 img {
     object-fit: cover;
     display: block;
@@ -41,6 +39,7 @@ a:focus-visible {
     position: sticky;
     text-decoration: none;
     top: 0;
+    transition: color .25s ease-in;
     background: #a0856f5f;
     color:#fbf2e9ca;
     font-family: Quicksilver;
@@ -49,6 +48,7 @@ a:focus-visible {
 }
  
 .main-content-bttn:hover {
+    transition: background .25s ease-out;
     background: #a58974;
     color:#fbf2e9;
 }
@@ -101,6 +101,7 @@ main img {
 .nav-bar a {
     font-family: Quicksilver, sans-serif;
     color: #fbf2e9;
+    transition: color .25s;
     text-decoration: none;
     font-size: clamp(1rem, 1.2vw, 4rem);
 }
@@ -167,11 +168,11 @@ header {
 }
 
 #our-story-link {
-    color:#4F7942;   
+    color:#4F7942;  
+    transition: color .10s ease-in-out; 
 }
 
 #our-story-link:hover {
-    text-decoration: underline;
     color:#72ae5f;
 }
 
@@ -313,6 +314,7 @@ h2 {
     border: 0px;
     background: #a58974;
     border-radius: 25px;
+    transition: background .25s ease-in-out;
 }
 
 #menu-intro a {
@@ -410,9 +412,7 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
-    flex-shrink: 0;
-    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+    padding-bottom: 2rem;
 }
 
 .footer-bar ul {
@@ -429,6 +429,7 @@ h2 {
     font-family: Quicksilver, sans-serif;
     white-space: nowrap;
     font-size: clamp(1rem, 1.2vw, 4rem);
+    transition: color .25s ease-in-out;
 }
 
 .footer-bar a:link {
@@ -667,6 +668,7 @@ legend {
     border: 0px;
     background: #a58974;
     border-radius: 25px;
+    transition: background .25s ease-in;
 }
 
 .form-button:hover {
@@ -761,6 +763,9 @@ textarea {
     .header-img {
         aspect-ratio: 16 / 12;
     }
+    .header2-img {
+        aspect-ratio: 16 / 12;
+    }
     .nav-bar li {
         margin: auto;
         padding: .5rem;
@@ -776,7 +781,6 @@ textarea {
     }
     .footer-bar {
         padding-top: 2rem;
-        padding-bottom: calc(2rem + env(safe-area-inset-bottom));
         height: auto;
     }
     .footer-bar ul {
