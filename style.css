@@ -9,11 +9,7 @@ html {
 }
 
 body {
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    background: #fbf2e9;
+  min-height: 100dvh;
 }
 
 main {
